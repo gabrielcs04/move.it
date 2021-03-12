@@ -17,3 +17,15 @@
     align-content: center;
     
 }
+
+@media (max-width: 1440px) {
+    .container  {
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .container section {
+        display: inline;
+    }
+}

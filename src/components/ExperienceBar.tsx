@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
+import AnimatedNumber from "animated-number-react";
 
 import styles from '../styles/components/ExperienceBar.module.css';
 
@@ -14,9 +15,16 @@ export function ExperienceBar() {
             <div>
                 <div style={{ width: `${percentToNextLevel}%` }} />
 
-                <span className={styles.currentExperience} style={{ left: `${percentToNextLevel}%` }} >
-                    {currentExperience} xp
+                <span className={styles.currentExperience} style={{ left: `${percentToNextLevel}%` }}>
+                    <AnimatedNumber
+                        value={currentExperience}
+                        formatValue={(value) => `${value.toFixed(0)} xp` }
+                    />
                 </span>
+
+                {/* <span className={styles.currentExperience} style={{ left: `${percentToNextLevel}%` }} >
+                    {currentExperience} xp
+                </span> */}
             </div>
             <span>{experienceToNextLevel} xp</span>
         </header>

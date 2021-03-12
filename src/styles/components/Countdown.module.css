@@ -79,3 +79,9 @@
     cursor: not-allowed;
     border-bottom: 5px solid var(--green);
 }
+
+@media (max-width: 720px) {
+    .countdownButton {
+        margin-bottom: 2rem;
+    }
+}
